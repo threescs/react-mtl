@@ -1,0 +1,1 @@
+export const target = process.env.NODE_ENV !== 'production' ? '' : 'https://mqa666.moretickets.com/'; //目标网站

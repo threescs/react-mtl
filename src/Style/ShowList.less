@@ -1,0 +1,173 @@
+@style-bg: #eee;
+@style-main : #09b6f2;
+@style-color: #2c3e50;
+/*
+    导航栏
+*/
+.index-nav {
+    .height {
+        height: 38px;
+        background: @style-main;
+    }
+    ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 9999;
+        height: 38px;
+        background: @style-main;
+    }
+    li {
+        position: relative;
+        line-height: 38px;
+        &+li {
+            &::after {
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                content: "";
+                border-left: 1px solid darken(@style-main, 10%);
+                border-right: 1px solid lighten(@style-main, 10%);
+            }
+        }
+    }
+    .on {
+        a {
+            margin: 5px 10px;
+            line-height: 28px;
+            border-radius: 8px;
+            background: darken(@style-main, 10%);
+        }
+    }
+    a {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+    }
+}
+/*
+    演出列表
+*/
+.index-list {
+    overflow: hidden;
+    background: #fff;
+    li {
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        .normal-content{
+            display: flex;
+            justify-content: space-between;
+            .left-poster{
+                position: relative;
+                .discount{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 100%;
+                    background-color: #09b6f2;
+                    font-size: 10px;
+                    position: absolute;
+                    color: #fff;
+                    bottom: 10px;
+                    right: -20px;
+                    padding-top: 7px;
+                    text-align: center;
+                    .number{
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-bottom: 2px;
+                        color: #fff;
+                    }
+                }
+                .poster-img{
+                    width: 124px;
+                    height: 150px;
+                    border-radius: 3px;
+                    background-size: cover;
+                }
+            }
+            .right-info {
+                padding-left:20px;
+                flex: 1 1 auto;
+                .show-name {
+                    color: #131313;
+                    font-size: 15px;
+                    line-height: 20px;
+                    height: 40px;
+                    margin-bottom: 8px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    font-family: PingFangSC-Medium;
+                }
+                .show-time {
+                    font-size: 12px;
+                    color: #AAA;
+                    line-height: 15px;
+                    margin-top: 20px;
+                }
+                .show-avenue {
+                    font-size: 12px;
+                    color: #AAA;
+                    line-height: 15px;
+                    text-overflow: ellipsis;
+                    margin-top: 10px;
+                }
+                .price-info {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    color: #09b6f2;
+                    margin-top: 30px;
+                    .show-status{
+                        width: 50px;
+                        height: 20px;
+                        line-height: 18px;
+                        font-size: 9px;
+                        text-align: center;
+                        border:1px solid #09b6f2;
+                        border-radius: 3px;
+                    }
+                    .show-price{
+                        height: 20px;
+                        line-height: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .tit {
+        overflow: hidden;
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .author {
+        padding-right: 5px;
+    }
+    .con {
+        line-height: 20px;
+        font-size: 12px;
+        color: #666;
+    }
+    time {
+        font-size: 12px;
+    }
+    .bottom {
+        margin-top: 5px;
+    }
+    .font {
+        .iconfont {
+            padding: 3px 5px;
+            margin-right: 5px;
+            border-radius: 5px;
+            color: #fff;
+        }
+    }
+}
